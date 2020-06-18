@@ -37,5 +37,3 @@ Apache 2.4.25
 
 ## phalcon-db
 mysql:5.6 
-
-v
