@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  phalcon-web:
+    container_name: phalcon-web
+    build: ./web
+    ports:
+      - "80:80"
+    environment:
+      PATH: ${PATH}:/usr/local/bin:/root/.composer/vendor/bin
+    volumes:
+      - ./web/www:/var/www/html
+    links:
+      - phalcon-db
+
+  phalcon-db:
+    image: mysql:5.6
+    container_name: phalcon-mysql5.6
+    ports:
+      - "3306:3306"
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_general_ci --init-connect="SET NAMES utf8" --innodb_file_per_table=1 --innodb_file_format=BARRACUDA
+    environment:
+      MYSQL_ROOT_PASSWORD: docker
+      MYSQL_DATABASE: docker
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+    volumes:
+      - ./db/data:/var/lib/mysql
