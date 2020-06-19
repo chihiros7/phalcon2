@@ -12,6 +12,7 @@
 - [5. 実行手順](#5-実行手順)
     - [5.1. phalcon-web](#51-phalcon-web)
     - [5.2. phalcon-db](#52-phalcon-db)
+- [6. その他](#6-その他)
 
 <!-- /TOC -->
 
@@ -96,3 +97,16 @@ http://localhost/sample/
 | ホスト | 127.0.0.1 または localhost |
 | ユーザ | docker |
 | パスワード | docker |
+
+# 6. その他
+webtoolsを使おうとするとエラーになる。
+理由はローカルホスト以外からはアクセスできないようになっているため。
+checkAccess()にホストのIPを追加するか、開発環境と割り切って無条件でtrueを返すようにすれば繋がります。
+```
+/home/phalcon-devtools/scripts/Phalcon/Web/Tools/controllers/ControllerBase.php
+```
+
+ブラウザからコントローラーやモデルを作成することができます。
+```
+http://localhost/sample/webtools.php
+```
