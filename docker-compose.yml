@@ -9,6 +9,7 @@ services:
     environment:
       PATH: ${PATH}:/usr/local/bin:/root/.composer/vendor/bin
     volumes:
+      - ./web/conf/php.ini:/usr/local/etc/php/php.ini
       - ./web/www:/var/www/html
     links:
       - phalcon-db
