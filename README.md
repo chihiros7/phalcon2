@@ -110,3 +110,16 @@ checkAccess()にホストのIPを追加するか、開発環境と割り切っ�
 ```
 http://localhost/sample/webtools.php
 ```
+
+IDE(今回はEclipse)で開発を行わなければならない場合、
+以下からzipをダウンロードしてEclipseにパスを通さなくてはならない。
+Docker内部とホスト側で同じリソースをダウンロードすることになってしまうがやむなし。
+```
+https://github.com/phalcon/phalcon-devtools/releases/tag/v2.0.13
+```
+
+まず対象のプロジェクトをインポートしてPHPプロジェクトにするとエラーが発生する。
+解決するにはプロパティ→インクルードパス→外部ソースフォルダを追加を選択して解凍したdevtoolsの以下を読み込ませる。
+```
+解凍したフォルダ/ide/stubs
+```

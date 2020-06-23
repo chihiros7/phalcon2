@@ -1,1 +1,11 @@
+# ディレクトリ
 db/data/
+
+
+# Eclipse系
+.project
+.buildpath
+.settings
+
+# その他
+.DS_Store
