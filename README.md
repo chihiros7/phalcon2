@@ -24,16 +24,11 @@
 
 # 2. 環境
 ## 2.1. phalcon-web
- Debian 
+ Debian(dockerのimageであるphp:5.6-apacheに依存)
+OS	GNU/Linux 9
 PHP 5.6.40  
 phalcon 2.0.13  
 Apache 2.4.25  
-
-| 項目名 | バージョン | 備考 |
-----|----|---- 
-| OS | GNU/Linux 9 | dockerのimageであるphp:5.6-apacheに依存 |
-| ユーザ | docker | |
-| パスワード | docker | |
 
 ## 2.2. phalcon-db
 mysql:5.6 
